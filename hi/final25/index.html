@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Brooklyn Academy of Excellence | Online Tutoring Academy</title>
+<meta name="description" content="Brooklyn Academy of Excellence — personalized, one-on-one online tutoring. Math, ELA, Writing, SHSAT & SAT prep. Real accountability. Real results."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="index.css">
+<script>
+  /* Apply saved theme before paint to avoid flash */
+  (function(){
+    var saved = localStorage.getItem('bae-theme');
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+<div class="preloader" id="preloader">
+  <div class="preloader-logo-wrap">
+    <div class="preloader-ring"></div>
+    <img src="logo-removebg-preview.png" alt="Brooklyn Academy of Excellence">
+  </div>
+  <div class="preloader-name">Brooklyn <span>Academy</span></div>
+  <div class="preloader-bar"></div>
+</div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ── TOPBAR ── -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📞 <a href="tel:+16464138125">646-413-8125</a></span>
+    <span>✉️ <a href="mailto:bkacademyofexcellence@gmail.com">bkacademyofexcellence@gmail.com</a></span>
+    <span>💻 100% Online Tutoring — Serving Students Everywhere</span>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark"><img src="logo-removebg-preview.png" alt="Brooklyn Academy of Excellence logo"/></div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">Brooklyn Academy</span>
+        <span class="logo-tag">of Excellence</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" id="nl-home" class="active"                        >Home</a>
+      <a href="about.html" id="nl-about"                        >About</a>
+      <a href="classes.html" id="nl-classes"                      >Classes</a>
+      <a href="schedule.html" id="nl-calendar"                     >Schedule</a>
+      <a href="testimonials.html" id="nl-testimonials"                 >Testimonials</a>
+      <a href="contact.html" id="nl-contact"                      >Contact</a>
+      <a href="classes.html" class="nav-cta"                      >Enroll Now</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark / light mode">🌙</button>
+    <button class="ham" id="ham" onclick="toggleMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ── MOBILE DRAWER ── -->
+<div class="mobile-drawer" id="mobDraw">
+  <a href="index.html" onclick="toggleMob()">Home</a>
+  <a href="about.html" onclick="toggleMob()">About</a>
+  <a href="classes.html" onclick="toggleMob()">Classes</a>
+  <a href="schedule.html" onclick="toggleMob()">Schedule</a>
+  <a href="testimonials.html" onclick="toggleMob()">Testimonials</a>
+  <a href="contact.html" onclick="toggleMob()">Contact</a>
+  <a href="classes.html" class="mob-cta"  onclick="toggleMob()">Enroll Now</a>
+  <button class="mob-theme-toggle" onclick="toggleTheme()">🌙 <span id="mobThemeLabel">Dark Mode</span></button>
+</div>
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-mesh"><span></span><span></span><span></span></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-inner">
+      <div class="hero-pill"><span class="hero-pill-dot"></span>Brooklyn Academy of Excellence</div>
+      <h1><span class="word" style="animation-delay:.3s">Helping</span> <span class="word" style="animation-delay:.38s">Students</span> <span class="word" style="animation-delay:.46s">Reach</span><br><span class="hero-accent word" style="animation-delay:.58s">Their Full Potential</span></h1>
+      <p class="hero-sub">Personalized, one-on-one online tutoring built around your child. Real accountability, genuine confidence-building, and flexible scheduling — from foundational skills to SHSAT &amp; SAT exam prep.</p>
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="location.href='classes.html'">Explore Classes</button>
+        <button class="btn-ghost" onclick="location.href='classes.html'">Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat sr sr-d1"><span class="stat-num">100+</span><span class="stat-label">Students &amp; Families Served</span></div>
+    <div class="stat sr sr-d2"><span class="stat-num stat-word">Personalized</span><span class="stat-label">Instruction &amp; Feedback</span></div>
+    <div class="stat sr sr-d3"><span class="stat-num stat-word">Experienced</span><span class="stat-label">Educators &amp; Specialists</span></div>
+    <div class="stat sr sr-d4"><span class="stat-num stat-word">Flexible</span><span class="stat-label">Online Learning</span></div>
+  </div>
+
+  <div class="sec-head sr">
+    <span class="eyebrow">What We Teach</span>
+    <h2>Programs for Every Student</h2>
+    <p>From elementary foundations to high-stakes exam prep — we have a course built for your child's goals. All classes online.</p>
+  </div>
+
+  <div class="subjects">
+    <div class="subj-card sr sr-d1" onclick="location.href='classes.html'"><span class="subj-icon">➗</span><h3>Mathematics</h3><p>Algebra, Geometry, Pre-Calc &amp; more</p></div>
+    <div class="subj-card sr sr-d2" onclick="location.href='classes.html'"><span class="subj-icon">📖</span><h3>ELA &amp; Reading</h3><p>Comprehension, vocab, critical analysis</p></div>
+    <div class="subj-card sr sr-d3" onclick="location.href='classes.html'"><span class="subj-icon">✍️</span><h3>Writing</h3><p>Essay craft, grammar &amp; composition</p></div>
+    <div class="subj-card sr sr-d4" onclick="location.href='classes.html'"><span class="subj-icon">🏫</span><h3>SHSAT Prep</h3><p>Specialized High School Admissions</p></div>
+    <div class="subj-card sr sr-d5" onclick="location.href='classes.html'"><span class="subj-icon">📊</span><h3>SAT / ACT</h3><p>College entrance exam mastery</p></div>
+    <div class="subj-card sr sr-d6" onclick="location.href='classes.html'"><span class="subj-icon">🌟</span><h3>Gifted &amp; Talented</h3><p>K–2 enrichment &amp; accelerated learning</p></div>
+    <div class="subj-card sr sr-d7" onclick="location.href='classes.html'"><span class="subj-icon">🔬</span><h3>Science</h3><p>Biology, Chemistry, Physics</p></div>
+    <div class="subj-card sr sr-d8" onclick="location.href='classes.html'"><span class="subj-icon">🎓</span><h3>Private Tutoring</h3><p>1-on-1 sessions tailored to your child</p></div>
+    <div class="subj-card sr sr-d9" onclick="location.href='classes.html'"><span class="subj-icon">🏛️</span><h3>HCHS Prep</h3><p>Hunter College High School Admissions</p></div>
+    <div class="subj-card sr sr-d10" onclick="location.href='classes.html'"><span class="subj-icon">🥇</span><h3>OG Instruction</h3><p>Our most experienced, veteran tutors</p></div>
+  </div>
+
+  <div class="sec-head sr">
+    <span class="eyebrow">Why Families Choose Us</span>
+    <h2>Built Around Your Student</h2>
+    <p>Every session is designed around the individual — their pace, their goals, their strengths.</p>
+  </div>
+  <div class="subjects" id="whyChooseGrid"></div>
+
+  <div class="about">
+    <div class="about-text sr sr-left">
+      <span class="eyebrow">About Us</span>
+      <h2>Where Excellence<br>Isn't Just a Name</h2>
+      <p>At Brooklyn Academy of Excellence, we believe every student has the potential to thrive — they just need the right guide to get there. We're a virtual tutoring academy built on personalized attention, real accountability, and a genuine belief in each student's ability to grow.</p>
+      <button class="btn-gold" onclick="location.href='about.html'" style="margin-top:12px">Read Our Full Story</button>
+    </div>
+    <div class="about-right sr sr-right">
+      <div class="about-badge-logo"><img src="logo-removebg-preview.png" alt="" style="width:100%;max-width:220px;opacity:.9"/></div>
+      <span class="about-sub">Brooklyn Academy of Excellence</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="index.html" style="display:inline-flex;">
+        <div class="logo-mark"><img src="logo-removebg-preview.png" alt="Brooklyn Academy of Excellence logo"/></div>
+        <div class="logo-text-wrap" style="margin-left:10px">
+          <span class="logo-name" style="color:#fff">Brooklyn Academy</span>
+          <span class="logo-tag">of Excellence</span>
+        </div>
+      </a>
+      <p>Where excellence isn't just a name — it's a promise. Personalized, one-on-one online tutoring for every student.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Programs</h4>
+      <a href="classes.html">Mathematics</a>
+      <a href="classes.html">ELA &amp; Reading</a>
+      <a href="classes.html">SHSAT Prep</a>
+      <a href="classes.html">HCHS Prep</a>
+      <a href="classes.html">SAT / ACT</a>
+      <a href="classes.html">Gifted &amp; Talented</a>
+      <a href="classes.html">Private Tutoring</a>
+    </div>
+    <div class="foot-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About</a>
+      <a href="classes.html">Classes &amp; Pricing</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+16464138125">646-413-8125</a>
+      <a href="mailto:bkacademyofexcellence@gmail.com">bkacademyofexcellence@gmail.com</a>
+      <a href="contact.html">WeChat</a>
+      <a href="contact.html">Contact Page</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Brooklyn Academy of Excellence. All rights reserved.</span>
+    <span style="display:flex;gap:14px">
+      <span style="cursor:pointer" onclick="openLegal('privacy')">Privacy Policy</span> ·
+      <span style="cursor:pointer" onclick="openLegal('terms')">Terms of Service</span>
+    </span>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     ENROLLMENT MODAL (WIZARD)
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="enrollOverlay" onclick="if(event.target===this) closeEnroll()">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <h2 id="modalTitle">Enroll Now</h2>
+      <button class="modal-x" onclick="closeEnroll()">✕</button>
+    </div>
+    <div class="step-dots" id="stepDots">
+      <div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-ft" id="modalFooter"></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     LEGAL MODAL (Privacy / Terms placeholder)
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="legalOverlay" onclick="if(event.target===this) closeLegal()">
+  <div class="modal-box" style="max-width:460px">
+    <div class="modal-hd">
+      <h2 id="legalTitle">Privacy Policy</h2>
+      <button class="modal-x" onclick="closeLegal()">✕</button>
+    </div>
+    <div class="modal-body" style="padding-bottom:24px">
+      <p style="color:var(--text-mute);font-size:14px;line-height:1.7">This page is coming soon. For questions about our policies, please <a href="mailto:bkacademyofexcellence@gmail.com" style="color:var(--gold);font-weight:700">email us</a> or call <a href="tel:+16464138125" style="color:var(--gold);font-weight:700">646-413-8125</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHATBOT
+══════════════════════════════════════════ -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open chat assistant">💬</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-hd">
+    <img src="logo-removebg-preview.png" alt="">
+    <div class="ch-info">
+      <h4>Academy Assistant</h4>
+      <p><span class="ch-dot"></span> Online now</p>
+    </div>
+    <button class="chat-min" onclick="toggleChat()">─</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask about pricing, seats, enrollment…" onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script src="app.js"></script>
+</body>
+</html>
